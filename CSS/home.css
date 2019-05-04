@@ -1,0 +1,222 @@
+/*=======================================================================================
+    # Base Design (width:1280px)#
+    ------------------
+    Table of content :
+    1. base html tag
+    2. nav
+    3. main
+
+*=======================================================================================*/
+/*-------------------------*
+    1. base html tag
+*--------------------------*/
+* ,::after ,::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    /* The image used */
+    background-image: url("../photo/bg.png");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2d2d2d;
+    font-size: 20px;
+    color:white;
+}
+
+/*=======================================================================================*/
+/*-------------------------*
+    2. nav
+*--------------------------*/
+.nav {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    background-color: #000000;
+}
+
+.nav a {
+    float: left;
+    text-align: center;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #ffffff;
+    width: 20%;
+}
+
+.nav a:hover {
+    background-color: #3498DB;
+    transition: 1s;
+}
+
+.nav .icon {
+    width:42px;
+    height:42px;
+    display: none;
+}
+
+/*=======================================================================================*/
+/*-------------------------*
+    3. main
+*--------------------------*/
+.main {
+    max-width: 1280px;/* max width 1280px */
+    height:100%;
+    margin: auto;
+}
+
+.container {
+    width: 500px;
+    position: absolute;
+    left: 15%;
+    top: 35%;
+}
+
+.container h1{
+    padding: 0;
+    font-size: 150px;
+    color: #3498DB;
+}
+
+.container #p2 {
+    margin-left: 100px;
+}
+
+/*=======================================================================================
+    # RWD Design #
+    --------------------------------------
+    Table of content :
+    1. For PC         >> max-width 1280px
+    2. For tablet pro >> max-width 1024px
+    3. For tablet     >> max-width 768px
+    4. For phone      >> max-width 480px
+
+*=======================================================================================*/
+/*-----------------------------------------*
+    1. For PC >> max-width 1280px
+*------------------------------------------*/
+@media only screen and (max-width: 1280px) {
+    body {
+        background-position: right center;
+    }
+
+    .main {
+        width: 1024px;/*max width 1024px*/
+    }
+
+}
+
+/*-----------------------------------------*
+    2. For tablet pro >> max-width 1024px
+*------------------------------------------*/
+@media only screen and (max-width: 1024px) {
+    .main {
+        width: 100%;/*max width 1024px*/
+        margin: auto;
+    }
+    .container {
+        position: relative;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+/*-----------------------------------------*
+    3. For tablet >> max-width 768px
+*------------------------------------------*/
+@media only screen and (max-width: 768px) {
+    body {
+        /* The image used */
+        background-image: url("../photo/bg2.png");
+        background-position: center;
+    }
+
+    .main {
+        margin: 0;
+    }
+
+    .nav a {
+        padding: 14px 0;
+    }
+
+    /*nav of responsive design */
+    /*before click list icon*/
+    .nav a:not(:first-child) {
+        display: none;
+    }
+
+    .nav a.icon{
+        width: 51px;
+        height: 51px;
+        float: right;
+        display: block;
+    }
+
+    /*home a tag*/
+    #home {
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 100px;
+        margin: auto;
+    }
+
+    /*after click list icon*/
+    .nav.responsive .icon {
+        float: right;
+        transform: rotate(90deg);
+        width:51px;
+        height:51px;
+    }
+
+    .nav.responsive a {
+        clear: both;
+        float: none;
+        display: block;
+        width: 100%
+    }
+
+    .container{
+        width: 100%;
+        text-align: center;
+    }
+
+    .container h1{
+        font-size: 120px;
+    }
+
+    .container #p2 {
+        margin-left: 0;
+    }
+}
+
+
+/*-----------------------------------------*
+    4. For phone >> max-width 480px
+*------------------------------------------*/
+@media only screen and (max-width: 480px) {
+    .container h1{
+        font-size: 90px;
+    }
+
+    .container p{
+        font-size: 15px;
+    }
+}

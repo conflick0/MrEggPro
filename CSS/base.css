@@ -1,0 +1,296 @@
+/*=======================================================================================
+    # Base Design (width:1280px)#
+    ------------------
+    Table of content :
+    1. base html tag
+    2. nav
+    3. main
+    4. footer
+
+*=======================================================================================*/
+/*-------------------------*
+    1. base html tag
+*--------------------------*/
+* ,::after ,::before{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #2d2d2d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/*=======================================================================================*/
+/*-------------------------*
+    2. nav
+*--------------------------*/
+.nav {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    background-color: #000000;
+}
+
+.nav a {
+    display: block;
+    float: left;
+    text-align: center;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #ffffff;
+    width: 20%;
+}
+
+.nav a:hover {
+    background-color: #3498DB;
+    transition: 1s;
+}
+
+.nav .icon {
+    width:42px;
+    height:42px;
+    display: none;
+}
+
+/*=======================================================================================*/
+/*-------------------------*
+    3. main
+*--------------------------*/
+.main {
+    width: 100%;
+    background-color: #2d2d2d;
+}
+.main .dark-background {
+    padding: 100px 0;
+    background: #2d2d2d;
+}
+
+.main .white-background {
+    padding: 100px 0;
+    background: #ffffff;
+    color: #000000;
+}
+
+.dark-background .section ,.white-background .section{
+    width: 1260px;/*max width 1260px*/
+    margin: auto;
+    display: flex;
+}
+
+.section.reverse {
+    flex-direction: row-reverse; /* reverse direction photo and article */
+}
+
+.section .img-container {
+    flex: 1;
+}
+
+.img-container img {
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+.section .article-container {
+    flex: 1;
+}
+
+.article-container .article {
+    width: 85%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.article h1 {
+    margin: 0;
+    font-size: 100px;
+    color: #3498DB;
+}
+
+.article-container p {
+    margin: 15px 0 0 0;
+    font-weight: bold;
+    display: block;
+}
+
+.tab-container {
+    width: 500px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.tab-container a {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 230px;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #ffffff;
+    background:  #8c8c8c;
+}
+
+.tab-container a:hover {
+    background-color: #3498DB;
+    transition: 1s;
+}
+
+/*=======================================================================================*/
+/*-------------------------*
+    4. footer
+*--------------------------*/
+.footer {
+    width: 100%;
+    padding: 100px;
+    background-color: #000000;
+    text-align: center;
+}
+
+
+/*=======================================================================================
+    # RWD Design #
+    --------------------------------------
+    Table of content :
+    1. For PC         >> max-width 1280px
+    2. For tablet pro >> max-width 1024px
+    3. For tablet     >> max-width 768px
+    4. For phone      >> max-width 480px
+
+*=======================================================================================*/
+/*-----------------------------------------*
+    1. For PC >> max-width 1280px
+*------------------------------------------*/
+@media only screen and (max-width: 1280px) {
+    .dark-background .section ,.white-background .section{
+        width: 1000px;/*max width 1260px*/
+    }
+
+    .img-container img {
+        width: 350px;
+    }
+
+    .article-container .article {
+        width: 100%;
+        margin: 0;
+    }
+
+    .article h1 {
+        font-size: 90px;
+    }
+
+
+}
+
+/*-----------------------------------------*
+    2. For tablet pro >> max-width 1024px
+*------------------------------------------*/
+@media only screen and (max-width: 1024px) {
+    .dark-background .section ,.white-background .section{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .img-container img {
+        width: 300px;
+    }
+
+    .article h1 {
+        font-size: 60px;
+    }
+
+    .tab-container {
+        width: 250px;
+    }
+
+}
+
+/*-----------------------------------------*
+    3. For tablet >> max-width 768px
+*------------------------------------------*/
+@media only screen and (max-width: 768px) {
+    .nav a {
+        padding: 14px 0;
+    }
+
+    /*nav of responsive design */
+    /*before click list icon*/
+    .nav a:not(:first-child) {
+        display: none;
+    }
+
+    .nav a.icon{
+        width: 51px;
+        height: 51px;
+        float: right;
+        display: block;
+    }
+
+    /*home a tag*/
+    #home {
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 100px;
+        margin: auto;
+    }
+
+    /*after click list icon*/
+    .nav.responsive .icon {
+        float: right;
+        transform: rotate(90deg);
+        width:51px;
+        height:51px;
+    }
+
+    .nav.responsive a {
+        clear: both;
+        float: none;
+        display: block;
+        width: 100%
+    }
+
+    .dark-background .section ,.white-background .section{
+        padding: 0 60px;
+        display: block;
+    }
+
+    .article-container .article{
+        margin: 15px 0;
+    }
+
+    .footer {
+        padding: 100px 10px;
+    }
+
+}
+
+
+/*-----------------------------------------*
+    4. For phone >> max-width 480px
+*------------------------------------------*/
+@media only screen and (max-width: 480px) {
+    .dark-background .section ,.white-background .section{
+        padding: 0 10px;
+    }
+
+    .img-container img {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .article h1 {
+        font-size: 50px;
+    }
+
+    .article p {
+        padding: 0 10px;
+        font-size: 15px;
+    }
+}
