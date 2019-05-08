@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #2d2d2d;
+    color: #ffffff;
+}
+
+.dark-background {
+    background: #2d2d2d;
+}
+
+.white-background {
+    background: #ffffff;
+    color: #000000;
+}
+
+.section {
+    width: 75%;
+    margin: auto;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center; /*horizontally centering item*/
+    align-items: center; /* vertically centering item*/
+}
+
+.section.reverse{
+    flex-direction: row-reverse; /* reverse row direction photo and article */
+}
+
+.section .container {
+    display: flex;
+    justify-content: center; /*horizontally centering item*/
+    align-items: center; /* vertically centering item*/
+    text-align: center;
+    flex: 1; /*Let all the flexible items be the same length*/
+}
+
+.container img {
+    width: 400px;
+}
+
+.container h1{
+    font-size: 100px;
+    margin: 10px 0;
+    color: #3498DB;
+}
+
+.container p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+@media only screen and (max-width: 1280px) {
+    .section {
+        width: 100%;
+        margin: 0;
+        padding: 100px 20px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .section {
+        display: block;
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section {
+        width: 100%;
+        margin: 0;
+        padding: 100px 25px;
+    }
+
+    .container h1{
+        font-size: 80px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .section {
+        padding: 100px 20px;
+    }
+
+    .container img {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .container h1{
+        font-size: 60px;
+    }
+
+    .container p {
+        font-size: 18px;
+    }
+
+}
