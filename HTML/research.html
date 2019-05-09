@@ -5,47 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../CSS/base.css">
     <title>Wen-Bing Horng</title>
-    <style>
-        @import "../CSS/base.css";
-    </style>
 </head>
 <body>
 <div class="nav" id="topNav">
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="javascript:void(0);" class="icon" onclick="showNav()">
         <i class="fas fa-bars"></i>
     </a>
-    <a id="home" href="./home.html">home</a>
-    <a href="./about.html">about</a>
-    <a href="./research.html">research</a>
-    <a href="./paper.html">paper</a>
-    <a href="./contact.html">contact</a>
+    <a id="home" href="./home.html">Home</a>
+    <a href="./about.html">About</a>
+    <a href="./research.html">Research</a>
+    <a href="./paper.html">Paper</a>
+    <a href="./contact.html">Contact</a>
 </div>
 <div class="main">
     <div class="white-background">
         <div class="section">
-            <div class="img-container">
-                <img src="../photo/research.png" alt="error">
+            <div class="container">
+                <img src="../photo/research.png" alt="research picture">
             </div>
-            <div class="article-container">
+            <div class="container">
                 <div class="article">
                     <h1>Research</h1>
-                </div>
-                <div class="tab-container">
-                    <a href="#information-security">Information Security</a>
-                    <a href="#multimedia">Multimedia</a>
-                    <a href="#embedded-system">Embedded Systems</a>
-                    <a href="#intelligent-systems">Intelligent Systems</a>
+                    <p>Information Security</p>
+                    <p>Multimedia</p>
+                    <p>Embedded Systems</p>
+                    <p>Intelligent Systems</p>
                 </div>
             </div>
         </div>
     </div>
-    <div id="information-security" class="dark-background">
+    <div class="dark-background">
         <div class="section reverse">
-            <div class="img-container">
-                <img src="../photo/security.png" alt="error">
+            <div class="container">
+                <img src="../photo/security.png" alt="security picture">
             </div>
-            <div class="article-container">
+            <div class="container">
                 <div class="article">
                     <h1>Information Security</h1>
                     <p>密碼學 網路安全 智慧卡認證</p>
@@ -55,12 +51,12 @@
             </div>
         </div>
     </div>
-    <div id="multimedia" class="white-background">
+    <div class="white-background">
         <div class="section">
-            <div class="img-container">
-                <img src="../photo/media.png" alt="error">
+            <div class="container">
+                <img src="../photo/media.png" alt="media picture">
             </div>
-            <div class="article-container">
+            <div class="container">
                 <div class="article">
                     <h1>Multimedia</h1>
                     <p>e-筆書法 影像處理</p>
@@ -69,12 +65,12 @@
             </div>
         </div>
     </div>
-    <div id="embedded-system" class="dark-background">
+    <div class="dark-background">
         <div class="section reverse">
-            <div class="img-container">
-                <img src="../photo/embedded_system.png" alt="error">
+            <div class="container">
+                <img src="../photo/embedded_system.png" alt="embedded picture">
             </div>
-            <div class="article-container">
+            <div class="container">
                 <div class="article">
                     <h1>Embedded Systems</h1>
                     <p>嵌入式系統 數位電路設計</p>
@@ -84,12 +80,12 @@
             </div>
         </div>
     </div>
-    <div id="intelligent-systems" class="white-background">
+    <div class="white-background">
         <div class="section">
-            <div class="img-container">
-                <img src="../photo/artificial.png" alt="error">
+            <div class="container">
+                <img src="../photo/artificial.png" alt="artificial picture">
             </div>
-            <div class="article-container">
+            <div class="container">
                 <div class="article">
                     <h1>Intelligent Systems</h1>
                     <p>智慧型運輸系統 資料採掘 機械學習</p>
@@ -99,13 +95,37 @@
             </div>
         </div>
     </div>
+    <div class="dark-background">
+        <div class="section reverse">
+            <div class="container">
+                <div class="article">
+                    <h1>Research Project</h1>
+                    <p>平台式全模組化IC包裝自動轉換機開發計畫－影像辨識技術</p>
+                    <p>支援教學現場多人互動之人機介面框架研發</p>
+                    <p>血糖試片參數校正晶片自動燒錄設備開發計畫－具辨識元件特徵之程式</p>
+                    <p>以全觀的系統思惟探討「整全健康」之知識建構與社會實踐－非制式學習社群參與有機健康學習之整全系統設計</p>
+                    <p>Tape and Reel製程專用型IC自動燒錄測試設備專案－具辨識IC元件特徵之程式開發</p>
+                    <p>以華語文為第二語言習得—字詞辨識策略研究與工具研發－子計畫一：以閱讀研究為基礎的華文識字學習策略與系統研發</p>
+                    <p>數位內容產學合作研究計畫－創新書畫藝術學習：打造數位學習環境與文化交流</p>
+                    <p>陶瓷礙子基座及礙桿腐蝕劣化影像分析</p>
+                    <p>風力發電機塔座漆膜劣化診斷</p>
+                    <p>礙子桿鍍鋅層鐵器線徑腐蝕劣化影像診斷</p>
+                    <p>以視覺為基礎的即時駕駛員疲倦偵測系統之研究與實作</p>
+                    <p>在JAVA及COBRA平臺上的分散式系統開發學習環境</p>
+                    <p>使用機械學習技術來抽取文件自動分類系統中之分類規則之研究</p>
+                    <p>使用類神經網路來作文件自動分類之研究</p>
+                    <p>一個符號近似推理系統形式化之研究與製作</p>
+                    <p>使用邏輯程式來處理常識推論</p>
+                    <p> 演繹式資料庫中整體限制檢查之研究</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="footer">
-    <h1>
-        Contact me
-    </h1>
-    <p>電話：(02) 2621-5656 轉 3302</p>
-    <p>信箱：horng@mail.tku.edu.tw</p>
+    <div class="container">
+        <h1>Contact</h1>
+    </div>
 </div>
 <script src="../JS/base.js"></script>
 </body>

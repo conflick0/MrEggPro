@@ -4,8 +4,36 @@
 
 body {
     margin: 0;
-    background: #2d2d2d;
     color: #ffffff;
+    font-size: 20px;
+}
+
+.nav {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    background-color: #000000;
+}
+
+.nav a {
+    display: block;
+    float: left;
+    text-align: center;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #ffffff;
+    width: 20%;
+}
+
+.nav a:hover {
+    background-color: #3498DB;
+    transition: 1s;
+}
+
+.nav .icon {
+    display: none;
 }
 
 .dark-background {
@@ -30,7 +58,7 @@ body {
     flex-direction: row-reverse; /* reverse row direction photo and article */
 }
 
-.section .container {
+.container {
     display: flex;
     justify-content: center; /*horizontally centering item*/
     align-items: center; /* vertically centering item*/
@@ -42,15 +70,21 @@ body {
     width: 400px;
 }
 
-.container h1{
+.article h1{
     font-size: 100px;
     margin: 10px 0;
     color: #3498DB;
 }
 
-.container p {
-    font-size: 20px;
+.article p {
     margin: 10px 0;
+}
+
+.footer {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center; /*horizontally centering item*/
+    background: #000000;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -70,13 +104,51 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    /*nav of responsive design */
+    /*before click list icon*/
+    .nav a:not(:first-child) {
+        display: none;
+    }
+
+    .nav a.icon{
+        width: 46px;
+        height: 46px;
+        float: right;
+        display: block;
+    }
+
+    /*home a tag*/
+    #home {
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 100px;
+        margin: auto;
+    }
+
+    /*after click list icon*/
+    .nav.responsive .icon {
+        float: right;
+        transform: rotate(90deg);
+        width:46px;
+        height:46px;
+    }
+
+    .nav.responsive a {
+        clear: both;
+        float: none;
+        display: block;
+        width: 100%
+    }
+
+
     .section {
         width: 100%;
         margin: 0;
         padding: 100px 25px;
     }
 
-    .container h1{
+    .article h1{
         font-size: 80px;
     }
 }
@@ -91,12 +163,11 @@ body {
         width: 100%;
     }
 
-    .container h1{
+    .article h1{
         font-size: 55px;
     }
 
-    .container p {
+    .article p {
         font-size: 18px;
     }
-
 }

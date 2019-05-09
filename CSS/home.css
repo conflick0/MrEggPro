@@ -10,7 +10,7 @@
 /*-------------------------*
     1. base html tag
 *--------------------------*/
-* ,::after ,::before{
+* {
     box-sizing: border-box;
     margin: 0;
 }
@@ -26,7 +26,7 @@ body {
     /* Full height */
     height: 100%;
 
-    /* Center and scale the image nicely */
+    /* Center and scale the image */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,6 +51,7 @@ body {
 }
 
 .nav a {
+    display: block;
     float: left;
     text-align: center;
     padding: 12px 0;
@@ -65,8 +66,6 @@ body {
 }
 
 .nav .icon {
-    width:42px;
-    height:42px;
     display: none;
 }
 
@@ -118,7 +117,6 @@ body {
     .main {
         width: 1024px;/*max width 1024px*/
     }
-
 }
 
 /*-----------------------------------------*
@@ -163,27 +161,31 @@ body {
     }
 
     .nav a.icon{
-        width: 51px;
-        height: 51px;
+        width: 46px;
+        height: 46px;
         float: right;
         display: block;
     }
 
     /*home a tag*/
     #home {
+        width: 20%;
+        left: 40%;
         position: absolute;
-        left: 0;
         display: block;
-        width: 100px;
-        margin: auto;
+    }
+
+    #home:hover{
+        background: black;
+        color: #3498DB;
     }
 
     /*after click list icon*/
     .nav.responsive .icon {
         float: right;
         transform: rotate(90deg);
-        width:51px;
-        height:51px;
+        width:46px;
+        height:46px;
     }
 
     .nav.responsive a {
@@ -206,7 +208,6 @@ body {
         margin-left: 0;
     }
 }
-
 
 /*-----------------------------------------*
     4. For phone >> max-width 480px
