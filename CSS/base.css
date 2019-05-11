@@ -114,6 +114,17 @@ body {
     background: #000000;
 }
 
+.fab{
+    padding: 30px;
+    font-size: 50px;
+}
+
+.fab:hover{
+    color: #3498DB;
+    transform: scale(1.5); /* 150% zoom */
+}
+
+
 /*=======================================================================================
     # RWD Design #
     --------------------------------------
@@ -223,4 +234,13 @@ body {
     .article p {
         font-size: 18px;
     }
+
+    .fab {
+        padding: 20px;
+    }
+
+    .fab:hover{
+        transform: none;
+    }
+
 }
