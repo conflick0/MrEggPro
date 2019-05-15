@@ -103,6 +103,18 @@ body {
     margin: 10px 0;
 }
 
+#one-punch-man {
+    top: 50px;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+#one-punch-man img{
+    width: 100px;
+}
+
+
 /*=======================================================================================*/
 /*-------------------------*
     4. footer
