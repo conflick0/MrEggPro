@@ -156,7 +156,7 @@ a.white-tab{
 
 .footer .hr.extend {
     animation-name: hr-extend;
-    animation-duration: 2s;
+    animation-duration: 4s;
 }
 
 @keyframes hr-extend {
