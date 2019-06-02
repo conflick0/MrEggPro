@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="nav" id="topNav">
-    <a href="javascript:void(0);" class="icon" onclick="showNav()">
+    <a href="javascript:showNav();" class="icon">
         <i class="fas fa-bars"></i>
     </a>
     <a id="home" href="./home.html">Home</a>
@@ -19,10 +19,7 @@
     <a href="./paper.html">Paper</a>
     <a href="./contact.html">Contact</a>
 </div>
-<div id="one-punch-man">
-    <img src="../photo/opm.png" alt="opm picture" onkeydown="move(event)">
-</div>
-<div class="main">
+<div id="main" class="main">
     <div class="dark-background">
         <div class="section">
             <div class="container">
@@ -38,11 +35,17 @@
                         深度學習、影像處理、
                         電腦視覺
                     </p>
+                    <div class="container">
+                        <a class="white-tab" href="#education">Education</a>
+                        <a class="white-tab" href="#experience">Experience</a>
+                        <a class="white-tab" href="#honor">Honor</a>
+                        <a class="white-tab" href="#group">Academic Group</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="white-background">
+    <div id="education" class="white-background">
         <div class="section reverse">
             <div class="container">
                 <img src="../photo/education.png" alt="education picture">
@@ -63,7 +66,7 @@
             </div>
         </div>
     </div>
-    <div class="dark-background">
+    <div id="experience" class="dark-background">
         <div class="section">
             <div class="container">
                 <img src="../photo/experience.png" alt="experience picture">
@@ -79,7 +82,7 @@
             </div>
         </div>
     </div>
-    <div class="white-background">
+    <div id="honor" class="white-background">
         <div class="section reverse">
             <div class="container">
                 <div class="article">
@@ -103,7 +106,7 @@
             </div>
         </div>
     </div>
-    <div class="dark-background">
+    <div id="group" class="dark-background">
         <div class="section">
             <div class="container">
                 <img src="../photo/group.png" alt="group picture">
@@ -118,13 +121,22 @@
         </div>
     </div>
 </div>
-<div class="footer">
+<div class="footer" >
     <div class="container">
         <div class="contact">
             <h1>Contact</h1>
-            <i class="fab fa-facebook" onclick="location.href='https://www.facebook.com/wenbing.horng'"></i>
-            <i class="fab fa-line"></i>
-            <i class="fab fa-google" onclick="location.href='mailto:horng@mail.tku.edu.tw?Subject=WebsiteResponse'"></i>
+            <i class="contact-icon fab fa-facebook" onclick="location.href='https://www.facebook.com/wenbing.horng'"></i>
+            <i class="contact-icon fas fa-phone" onclick="location.href='tel:+886-2-26215656'"></i>
+            <i class="contact-icon fab fa-google" onclick="location.href='mailto:horng@mail.tku.edu.tw?Subject=WebsiteResponse'"></i>
+        </div>
+    </div>
+    <hr id="hr" class="hr extend">
+    <div class="container">
+        <div class="power">
+            <h1>Powered By</h1>
+            <h2>許世楨</h2>
+            <h2>鄭彥良</h2>
+            <h2>呂乃為</h2>
         </div>
     </div>
 </div>

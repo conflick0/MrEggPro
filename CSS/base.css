@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background-color: #2d2d2d;
@@ -103,16 +107,34 @@ body {
     margin: 10px 0;
 }
 
-#one-punch-man {
-    top: 50px;
-    left: 0;
-    position: absolute;
-    z-index: 2;
+.article .container {
+    flex-wrap: wrap;
 }
 
-#one-punch-man img{
-    width: 100px;
+.container a {
+    text-align: center;
+    padding: 12px 0;
+    text-decoration: none;
+    border: 2px solid #737373;
+    color:  #737373;
+    border-radius: 25px;
+    width: 250px;
+    margin:15px;
+
 }
+
+a.white-tab{
+    color:   #cccccc;
+    border: 2px solid #cccccc;
+}
+
+.container a:hover{
+    border: 2px solid #3498DB;
+    color: #3498DB;
+    transition: 1s;
+    transform: scale(1.1); /* 110% zoom */
+}
+
 
 
 /*=======================================================================================*/
@@ -120,18 +142,39 @@ body {
     4. footer
 *--------------------------*/
 .footer {
-    padding: 100px 0;
-    display: flex;
-    justify-content: center; /*horizontally centering item*/
+    display: block;
     background: #000000;
 }
 
-.fab{
+.footer .container {
+    padding: 50px 0;
+}
+
+.footer .hr {
+    width: 80%;
+}
+
+.footer .hr.extend {
+    animation-name: hr-extend;
+    animation-duration: 2s;
+}
+
+@keyframes hr-extend {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+
+.contact-icon{
     padding: 30px;
     font-size: 50px;
 }
 
-.fab:hover{
+.contact-icon:hover{
     color: #3498DB;
     transform: scale(1.5); /* 150% zoom */
 }
@@ -209,7 +252,6 @@ body {
 
     .nav.responsive a {
         clear: both;
-        float: none;
         display: block;
         width: 100%
     }
@@ -247,11 +289,15 @@ body {
         font-size: 18px;
     }
 
-    .fab {
+    .container a {
+        width: 200px;
+    }
+
+    .contact-icon {
         padding: 20px;
     }
 
-    .fab:hover{
+    .contact-icon:hover{
         transform: none;
     }
 
