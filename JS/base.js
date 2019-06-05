@@ -12,9 +12,8 @@ const mainHeight = document.getElementById('main').offsetHeight;/*includes paddi
 window.onscroll = function() {extend_hr()};
 
 function extend_hr() {
-    var target_pos = mainHeight-700;
+    var target_pos = mainHeight-500;
     var current_pos = document.documentElement.scrollTop;
-
 
     if ( current_pos > target_pos ) {
         document.getElementById("hr").className = "hr extend";
@@ -22,5 +21,7 @@ function extend_hr() {
         document.getElementById("hr").className = "hr";
     }
 }
+
+
 
 
